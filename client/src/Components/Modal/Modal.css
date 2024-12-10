@@ -1,0 +1,247 @@
+.modal-translate {
+  transform: translateY(-50vh);
+  transition: transform 0.3s ease;
+}
+
+.modal-translate-active {
+  transform: translateY(0vh);
+}
+
+.Overlay {
+  background: rgba(0, 0, 0, 0.75);
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10 !important;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.choose-account {
+  background-color: white;
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  z-index: 5;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.choose-account div {
+  display: flex;
+}
+
+.choose-account p {
+  text-decoration: underline;
+}
+
+.choose-account div div {
+  padding: 5rem 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.choose-account .login-account {
+  background-color: #9f8cfc;
+  height: 100%;
+  color: white;
+}
+
+.choose-account h2 {
+  font-size: 2.5rem;
+  margin: 0;
+  position: absolute;
+  top: 5%;
+}
+
+.choose-account div h4 {
+  margin: 0 auto;
+  font-size: x-large;
+}
+
+.choose-account ul {
+  list-style: inside;
+  list-style-position: inside;
+  padding-left: 1rem;
+  text-indent: -1.1rem;
+}
+
+.choose-account .login-account {
+  color: white;
+}
+
+.choose-account .guest-account {
+  color: black;
+}
+
+.close-button {
+  position: absolute;
+  top: 5%;
+  left: 96%;
+  width: 2em;
+  height: 2em;
+  border: none;
+  background: rgba(180, 83, 107, 0.11);
+  border-radius: 5px;
+  transition: background 0.5s;
+}
+
+.X {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1em;
+  height: 0.75px;
+  background-color: rgb(255, 255, 255);
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.Y {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1em;
+  height: 0.75px;
+  background-color: #fff;
+  transform: translateX(-50%) rotate(-45deg);
+}
+
+.close {
+  position: absolute;
+  display: flex;
+  padding: 0.8rem 1.5rem;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-50%);
+  top: 110%;
+  left: 20%;
+  width: 3em;
+  height: 1.7em;
+  font-size: 12px;
+  background-color: rgb(19, 22, 24);
+  color: rgb(187, 229, 236);
+  border: none;
+  border-radius: 3px;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.close-button:hover {
+  background-color: rgb(211, 21, 21);
+}
+
+.close-button:active {
+  background-color: rgb(130, 0, 0);
+}
+
+.close-button:hover > .close {
+  animation: close 0.2s forwards 0.25s;
+}
+
+@keyframes close {
+  100% {
+    opacity: 1;
+  }
+}
+
+.choose-account .login-account ul li,
+.choose-account .guest-account ul li {
+  text-wrap: wrap;
+}
+
+.button {
+  background-color: #f3f7fe;
+  color: var(--main);
+  margin: 1rem auto;
+  border: none;
+  font-size: large;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 0.5rem 1.5rem;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background-color: var(--main);
+  color: #fff;
+}
+
+.guest {
+  background-color: var(--main);
+  color: white;
+  margin: 1rem auto;
+}
+
+.guest:hover {
+  background-color: white;
+  color: var(--main);
+}
+
+@media (max-width: 768px) {
+  .choose-account {
+    width: 90%;
+  }
+
+  .choose-account h2 {
+    font-size: 1.5rem;
+    top: 10%;
+  }
+
+  .choose-account div div {
+    padding: 2rem 1rem;
+  }
+
+  .choose-account div h4 {
+    font-size: 1.1rem;
+  }
+
+  .button {
+    font-size: medium;
+    padding: 0.4rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .choose-account {
+    width: 90%;
+    margin: 0 auto;
+    font-size: small;
+  }
+
+  .choose-account h2 {
+    font-size: 1.8rem;
+    top: 3%;
+  }
+
+  .close-button {
+    left: 90%;
+    top: 2%;
+  }
+
+  .choose-account div div {
+    padding: 4rem 0.5rem 0.75rem;
+    width: 50%;
+    height: 100%;
+  }
+
+  .button.guest {
+    padding: 0.4rem;
+  }
+
+  .choose-account div h4 {
+    font-size: 1rem;
+  }
+
+  .button {
+    font-size: small;
+    padding: 0.3rem 0.8rem;
+    text-wrap: nowrap;
+  }
+}

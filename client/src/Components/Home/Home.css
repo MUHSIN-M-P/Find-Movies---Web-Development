@@ -1,0 +1,28 @@
+.home{
+        background: var(--background);
+        color: var(--text);
+}
+
+.m-left{
+        margin-left: 65px;
+}
+
+.home div{
+        margin-bottom: .5rem;
+}
+
+.carousel{
+        display: flex;
+        flex-wrap: wrap;
+        gap: .75rem;
+}
+
+.h2{
+        margin-bottom: .4rem;
+}
+
+@media (max-width:600px) {
+        .m-left{
+                margin-left: 1rem;
+        }
+}

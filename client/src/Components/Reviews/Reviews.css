@@ -1,0 +1,32 @@
+.review-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.review-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: solid 3px var(--main);
+  padding: 0.3rem;
+}
+
+.review-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.review-username {
+  font-size: 18px;
+  font-weight: 600;
+  color: #282828;
+  margin-bottom: 0.2rem;
+}
+
+.review-text {
+  color: #282828;
+  font-size: small;
+}

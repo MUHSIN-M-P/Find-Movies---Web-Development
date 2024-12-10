@@ -1,0 +1,152 @@
+.card-item {
+  width: 300px;
+  position: relative;
+}
+
+.image-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.movie-poster {
+  border-radius: 10px;
+  height: 420px;
+  object-fit: cover;
+  width: 100%;
+  transition: opacity 0.3s ease-in;
+}
+
+.play-button {
+  width: 50px !important;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateY(-20px);
+  opacity: 0;
+  height: 50px;
+  background: url("https://img.icons8.com/?size=100&id=0SMLLlR49pHO&format=png&color=ffffff")
+    no-repeat center center;
+  background-size: contain;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.3s ease-in;
+}
+
+.play-button:hover {
+  background: url("https://img.icons8.com/?size=50&id=bqOL9fT7XSdo&format=png&color=7b61ff")
+    no-repeat center center;
+}
+
+.add-to-list {
+  opacity: 0;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+  display: block;
+  position: absolute;
+  width: calc(100% - 20px);
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  border: none;
+  border-radius: 3px;
+  padding: 8px 10px;
+  cursor: pointer;
+  color: white;
+  left: 10px;
+  bottom: 25px;
+  transform: translateY(20px);
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.3s ease-in,
+    background-color 0.5s ease;
+}
+
+.add-to-list:hover {
+  background-color: var(--main);
+}
+
+.movie-details-card h4 {
+  margin-top: 0.3rem;
+  text-wrap: wrap;
+}
+
+.movie-details-card p {
+  color: rgb(169, 169, 169);
+  font-size: small;
+}
+
+.image-container:hover .play-button {
+  transform: translate(-50%, -50%) translateY(0);
+  opacity: 1;
+}
+
+.image-container:hover .add-to-list {
+  transform: translateY(10px);
+  opacity: 1;
+}
+
+@media (max-width: 1024px) {
+  .card-item {
+    width: 250px;
+  }
+
+  .movie-poster {
+    height: 350px;
+  }
+
+  .play-button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .add-to-list {
+    font-size: 12px;
+    padding: 6px 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-item {
+    width: 200px;
+  }
+
+  .movie-poster {
+    height: 300px;
+  }
+
+  .play-button {
+    width: 35px;
+    height: 35px;
+  }
+
+  .add-to-list {
+    font-size: 10px;
+    padding: 5px 6px;
+  }
+
+  .movie-details-card h4 {
+    font-size: 14px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .card-item {
+    width: 200px;
+  }
+
+  .movie-poster {
+    height: 275px;
+  }
+
+  .play-button {
+    width: 30px;
+    height: 30px;
+  }
+
+  .add-to-list {
+    font-size: 8px;
+    padding: 4px 5px;
+  }
+
+  .movie-details-card h4 {
+    font-size: 12px;
+    text-wrap: wrap;
+  }
+}
