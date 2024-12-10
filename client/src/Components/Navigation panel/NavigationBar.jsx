@@ -41,8 +41,8 @@ export const NavigationBar = () => {
         }`}
       >
         <img
-          src="https://img.icons8.com/?size=20&id=vdK7simX78vX&format=png&color=000000"
-          className={`navOpenBtn ${theme === "light" ? "invert" : null}`}
+          src="https://img.icons8.com/?size=20&id=aflTW0mA9OBv&format=png&color=000000"
+          className={`navOpenBtn ${theme === "light" ? null : "invert"}`}
           onClick={handleNavOpen}
           alt=""
         />
